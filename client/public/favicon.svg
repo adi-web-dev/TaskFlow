@@ -1,0 +1,22 @@
+ <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="w-7 h-7"
+    fill="#4f39f6"
+    aria-hidden="true"
+  >
+    <path
+      d="M20 12.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12"
+      stroke="white"
+      strokeWidth="2.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="m8 12 3.5 3.5L21 5.5"
+      stroke="white"
+      strokeWidth="2.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
