@@ -522,7 +522,7 @@ const TaskDetails = () => {
                                             </div>
                                         ) : (
                                             <div className="relative ml-2">
-                                                <div className="absolute bottom-0 left-[7px] top-0 w-px bg-slate-200" />
+                                                <div className="absolute bottom-0 left-1.75 top-0 w-px bg-slate-200" />
 
                                                 <div className="space-y-6">
                                                     {activities.map(
