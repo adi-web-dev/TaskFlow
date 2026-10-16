@@ -53,7 +53,7 @@ const Projects = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/projects`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/projects`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -132,7 +132,7 @@ const Projects = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/projects`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/projects`,
                 {
                     method: "POST",
                     headers: {
@@ -184,7 +184,7 @@ const Projects = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/projects/${editingProject._id}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${editingProject._id}`,
                 {
                     method: "PUT",
                     headers: {
@@ -226,7 +226,7 @@ const Projects = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/projects/${deletingProject._id}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${deletingProject._id}`,
                 {
                     method: "DELETE",
                     headers: {

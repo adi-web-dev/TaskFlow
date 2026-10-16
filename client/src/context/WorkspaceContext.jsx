@@ -30,7 +30,7 @@ export const WorkspaceProvider = ({ children }) => {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/workspaces",
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ export const WorkspaceProvider = ({ children }) => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/workspaces",
+      `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces`,
       {
         method: "POST",
         headers: {

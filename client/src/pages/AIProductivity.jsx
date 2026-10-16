@@ -32,7 +32,7 @@ const AIProductivity = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/ai/productivity",
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/ai/productivity`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ const AIProductivity = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/ai/task-priorities",
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/ai/task-priorities`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -63,7 +63,7 @@ const Dashboard = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${workspaceId}/my-tasks`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${workspaceId}/my-tasks`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -282,7 +282,7 @@ const Dashboard = () => {
 
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/members`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/members`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -324,7 +324,7 @@ const Dashboard = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/projects/${newTask.projectId}/tasks`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${newTask.projectId}/tasks`,
                 {
                     method: "POST",
                     headers: {

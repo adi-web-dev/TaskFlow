@@ -56,7 +56,7 @@ const Members = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${activeWorkspace._id}/members/${userId}/details`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${activeWorkspace._id}/members/${userId}/details`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ const Members = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/members`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/members`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -123,7 +123,7 @@ const Members = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${activeWorkspace._id}/team-workload`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${activeWorkspace._id}/team-workload`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -154,7 +154,7 @@ const Members = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/members/${memberToRemove.user._id}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/members/${memberToRemove.user._id}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -188,7 +188,7 @@ const Members = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/ai/workspaces/${activeWorkspace._id}/members/${userId}/performance`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/ai/workspaces/${activeWorkspace._id}/members/${userId}/performance`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

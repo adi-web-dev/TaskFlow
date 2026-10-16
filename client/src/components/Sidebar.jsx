@@ -106,7 +106,7 @@ const Sidebar = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/workspaces/join",
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/join`,
                 {
                     method: "POST",
                     headers: {

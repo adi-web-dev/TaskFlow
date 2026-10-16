@@ -84,7 +84,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/projects/${projectId}/tasks`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${projectId}/tasks`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -138,7 +138,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/comments`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/comments`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -181,7 +181,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/comments`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/comments`,
                 {
                     method: "POST",
                     headers: {
@@ -221,7 +221,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/comments/${commentId}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/comments/${commentId}`,
                 {
                     method: "DELETE",
                     headers: {
@@ -268,7 +268,7 @@ const ProjectDetails = () => {
             const workspaceId = activeWorkspace?._id;
 
             const response = await fetch(
-                `http://localhost:5000/api/workspaces/${workspaceId}/members`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/workspaces/${workspaceId}/members`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -309,7 +309,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/projects/${projectId}/tasks`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/projects/${projectId}/tasks`,
                 {
                     method: "POST",
                     headers: {
@@ -398,7 +398,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${editingTask._id}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${editingTask._id}`,
                 {
                     method: "PUT",
                     headers: {
@@ -451,7 +451,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${assigningTask._id}/assign`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${assigningTask._id}/assign`,
                 {
                     method: "PUT",
                     headers: {
@@ -493,7 +493,7 @@ const ProjectDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${deletingTask._id}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${deletingTask._id}`,
                 {
                     method: "DELETE",
                     headers: {

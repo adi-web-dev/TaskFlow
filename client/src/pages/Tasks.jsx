@@ -59,7 +59,7 @@ const Tasks = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${workspaceId}/my-tasks`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${workspaceId}/my-tasks`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -118,7 +118,7 @@ const Tasks = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/status`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/status`,
                 {
                     method: "PUT",
                     headers: {

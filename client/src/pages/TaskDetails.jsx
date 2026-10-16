@@ -57,7 +57,7 @@ const TaskDetails = () => {
             console.log("fetching task")
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/details`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/details`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ const TaskDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/comments`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/comments`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ const TaskDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/activity`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/activity`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -163,7 +163,7 @@ const TaskDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/tasks/${taskId}/comments`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/tasks/${taskId}/comments`,
                 {
                     method: "POST",
                     headers: {
@@ -203,7 +203,7 @@ const TaskDetails = () => {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/comments/${commentId}`,
+                `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/comments/${commentId}`,
                 {
                     method: "DELETE",
                     headers: {
